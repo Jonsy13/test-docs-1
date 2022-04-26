@@ -43,7 +43,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: "master"
-          repository: jonsy13/litmus-cd-1
+          repository: Jonsy13/litmus-cd-1
 
       - name: Updating the manifests and pushing
         run: |
@@ -52,8 +52,8 @@ jobs:
           # Deployment Images Update
           sed -i -e "s|litmuschaos/litmus-docs:.*|litmuschaos/litmus-docs:$tag|g" litmusdocs-deploy.yaml
 
-          git config user.name jonsy13
-          git config user.email jonsy13@github.com
+          git config user.name Jonsy13
+          git config user.email Jonsy13@github.com
           git add .
           git commit -m "Manifest updated for litmus-docs"
           git push origin master
