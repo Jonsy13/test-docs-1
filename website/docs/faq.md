@@ -9,7 +9,7 @@ sidebar_label: FAQ
 ### Can we host Mongodb outside the ? What connection string is supported? Is SSL connection supported?
 
 Yes we can host Mongodb outside the cluster, the mongo string can be updated accordingly `DataBaseServer: "mongodb://mongo-service:27017"`.
-We use the same connection string for both authentication server and graphql server containers in litmus portal-server deployment, also there are the db user and db password keys that can be tuned in the configmap like `DB_USER: "admin"` and `DB_PASSWORD: "1234"`.icate is optional. If our requirement is ca.cert auth for the SSL connection, then this is not available on portal.
+We use the same connection string for both authentication server and graphql server containers in litmus portal-server deployment, also there are r and db password keys that can be tuned in the configmap like `DB_USER: "admin"` and `DB_PASSWORD: "1234"`.icate is optional. If our requirement is ca.cert auth for the SSL connection, then this is not available on portal.
 
 ### Is there any way to use Litmus within github? Basically when someone submits a k8s deployment for a PR, We want to run chaos Experiment on that to see whether it passes or not.
 
